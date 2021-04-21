@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/*sittings for the site itself*/
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*Smoothen the sites movement when you scroll*/
+html
+{
+  scroll-behavior: smooth;
+}
+
+/*the minimum height of the body*/
+body
+{
+  min-height: 1000px;
+}
+
+/*The sittings for the Header*/
+header
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px;
+  z-index: 1000;
+  transition: 0.6s;
+}
+
+/*Header Sticky will turn the header white when you scroll down*/
+header.sticky
+{
+  padding: 5px 100px;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+/*Header Logo, is the Logo sittings*/
+header .logo
+{
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+
+/*Header ul, is the unordered list of the menu*/
+header ul
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*header ul li, is the list item of the menu*/
+header ul li
+{
+  position: relative;
+  list-style: none;
+}
+
+/*Header ul li a, is the links in the menu*/
+header ul li a
+{
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 300;
+  transition: 0.6s;
+}
+
+/*Header Sticky Logo and ul li a, when you scroll down the text will turn black because the header gets white*/
+header.sticky .logo,
+header.sticky ul li a
+{
+  color: #000;
+}
+
+/*Banner is where the Header images is, or layout*/
+.banner
+{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url("images/airplane-fact.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Banner h2, is the big text thats is on the Header images/layout*/
+.banner h2
+{
+  color: #fff;
+  font-size: 90px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1em;
+}
+
+/*Span is the span text turns blue*/
+.banner h2 span
+{
+  color: #1C5C90;
+}
+
+/*The sittings if the section*/
+.sec
+{
+  background: #fff;
+  padding: 100px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*The sittings of the section content*/
+.sec .content
+{
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+/*Mxw800p, means that the row/section is Max width 800px*/
+.mxw800p
+{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/*The sittings of the Headline 3 text*/
+h3
+{
+  font-size: 40px;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+
+/*The sittings of the paragraph text*/
+p
+{
+  position: relative;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/*BTN is the sittings of the bottons*/
+.btn
+{
+  position: relative;
+  display: inline-block;
+  padding: 10px 30px;
+  background: #000;
+  text-decoration: none;
+  color: #fff;
+}
+
+/*The sittings for service section*/
+.services
+{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+  max-width: 100%;
+  margin-top: 40px;
+    
+}
+
+/*The sittings for the service box, where the content is*/
+.services .box
+{
+  width: 300px;
+  margin: 0 auto;
+  background: #1C5C90;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+/*IconBx is where the box to the icon is located*/
+.services .box .iconBx
+{
+  margin-top: 25px;
+}
+
+/*IconBx img is where the images or icon is located*/
+.services .box .iconBx img
+{
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+/*The sittings for the heatline 2 in the service box*/
+.services .box h2
+{
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/*The sittings for the stats section*/
+.stats
+{
+  background: #000;
+  padding-top: 250px;
+  margin-top: -250px;
+}
+
+/*The sittings for the headline 3 and the paragraph text in the stats section*/
+.stats h3,
+.stats p
+{
+  color: #fff;
+}
+
+/*The sittings for the statsBox, where the content is of the stats section*/
+.statsBox
+{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+/*The sittings for the statsBox headline 2*/
+.statsBox h2
+{
+  color: #fff;
+  font-size: 36px;
+}
+
+/*The sittings for the statsBox headline 4*/
+.statsBox h4
+{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/*The sittings for the WorkBx (Work Box) section also called Portfolio*/
+.workBx
+{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+/*The sittings for the content in the workBx (Work Box) , it shows all the diffrent countries where to travel*/
+.workBx .travle
+{
+  position: relative;
+  background: #1C5C90;
+  min-height: 300px;
+  width: 250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*The sittings of the hover, when you roll over the pictures it will get black*/
+.workBx .travle:hover
+{
+  background: #000;
+}
+
+/*The sittings of the links insite the pictures*/
+.workBx .travle a
+{
+  text-decoration: none;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/*The sittings of the link text when you roll over the picture*/
+.workBx .travle:hover a
+{
+  color: rgba(255,255,255,1);  
+}
+
+/*The sittings of the teamBx (Team Box) section*/
+.teamBx
+{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+/*The sittings of the teamBx (Team Box) members/flight crew*/
+.teamBx .member
+{
+  position: relative;
+  background: #fff;
+  min-height: 300px;
+  width: 250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*The sittings of the teamBx (Team Box), the box where the content is*/
+.teamBx .member .imgBx
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*The sittings of the teamBx (Team Box), the images itself*/
+.teamBx .member .imgBx img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*The sittings of the teamBx (Team Box), where the text is*/
+.teamBx .member .details
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+/*The sittings of the teamBx (Team Box), the text hover when you roll over the images*/
+.teamBx .member:hover .details
+{
+  opacity: 1;
+}
+
+/*The sittings of the teamBx (Team Box), the headline 2*/
+.teamBx .member .details h2
+{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/*The sittings of the teamBx (Team Box), the headline 2 span*/
+.teamBx .member .details h2 span
+{
+  display: block;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+/*The sittings of the Contact section*/
+.contact
+{
+  background: #000;
+}
+
+/*The sittings of Headline 3 and paragraph text in the contact section*/
+.contact h3,
+.contact p
+{
+  color: #fff;
+}
+
+/*The sittings of the Contact Form section*/
+.contactForm
+{
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+}
+
+/*The width of the Contact Form*/
+.contactForm form
+{
+  width: 100%;
+}
+
+/*The sittings of the rows in the Contact Form*/
+.contactForm .row100
+{
+  display: flex;
+  width: 100%;
+}
+
+/*The sittings of the InputBx50 (Input Box 50) because it is 50% width*/
+.contactForm .row100 .inputBx50
+{
+  width: 50%;
+  margin: 0 20px;
+}
+
+/*The sittings of the InputBx100 (Input Box 100) because it is 100% width*/
+.contactForm .row100 .inputBx100
+{
+  width: 100%;
+  margin: 0 20px;
+}
+
+/*The sittings of the Input and Textarea in the Contact Form*/
+.contactForm .row100 input,
+.contactForm .row100 textarea
+{
+  position: relative;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  width: 100%;
+  padding: 10px 0;
+  outline: none;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 20px 0;
+  resize: none;
+}
+
+/*The sittings of the height of the Textarea*/
+.contactForm .row100 textarea
+{
+  height: 100px;
+}
+
+/*The sittings of the Placeholder text in the Contact Form*/
+.contactForm .row100 input::placeholder,
+.contactForm .row100 textarea::placeholder
+{
+  color: rgba(255,255,255,0.5);
+}
+
+/*The sittings of the Submit button in the Contact Form*/
+.contactForm .row100 input[type="submit"]
+{
+  background: #fff;
+  color: #000;
+  max-width: 100px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/*The sittings of the sci (Social Media section)*/
+.sci
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+/*The sittings of the sci (Social Media) unordered list*/
+.sci ul
+{
+  display: flex;
+}
+
+/*The sittings of the sci (Social Media) list items*/
+.sci ul li
+{
+  list-style: none;
+}
+
+/*The sittings of the sci (Social Media) links*/
+.sci ul li a
+{
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 30px;
+}
+
+/*The sittings of the sci (Social Media) images*/
+.sci ul li a img
+{
+  filter: invert(1);
+  max-width: 40px;
+}
+
+/*The sittings of the sci (Social Media) images hover*/
+.sci ul li a:hover img
+{
+  opacity: 0.5;
+}
+
+/*The sittings of the Copyright link*/
+.copyright a
+{
+  color: #FFF;
+}
+
+/*The sittings for the Toggle (Burger Menu)*/
+.toggle
+{
+  display: none;
+}
+
+/*The sittings of the Iframe where the Booking is*/
+.iframe
+{
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+/*Media Queries sittings when the screens that are 992px or less*/
+@media (max-width: 992px)
+{
+    .toggle
+    {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    
+    .toggle::before
+    {
+        content: '';
+        position: absolute;
+        top: 4px;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        z-index: 1;
+        box-shadow: 0 10px 0 #000;
+        transition: 0.5s;
+    }
+    
+    .toggle::after
+    {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        z-index: 1;
+        transition: 0.5s;
+    }
+
+    header,
+    header.sticky
+    {
+        padding: 5px 50px;
+        background: #fff;
+    }
+
+    header ul
+    {
+        position: absolute;
+        top: 59px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        overflow: auto;
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    header.active ul
+    {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        padding-top: 20px;
+    }
+
+    header.active ul li a
+    {
+        margin: 10px 0;
+        font-size: 20px;
+        display: inline-block;
+    }
+
+    header .logo,
+    header ul li a
+    {
+        color: #000;
+    }
+    
+    .banner
+    {
+        background-position: center;
+    }
+    
+    .banner h2
+    {
+        font-size: 60px;
+        padding: 0 50px;
+    }
+    
+    .sec
+    {
+        padding: 100px 50px 50px 50px;
+    }
+    
+    .services .box
+    {
+        width: 100%;
+    }
+    
+    .stats
+    {
+        padding-top: 250px;
+    }
+    
+    .row100
+    {
+        flex-direction: column;
+    }
+    
+    .contactForm .row100 .inputBx50,
+    .contactForm .row100 .inputBx100
+    {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .sci
+    {
+        margin: 20px;
+    }
+    
+    .sci ul li a img
+    {
+        font-size: 24px;
+    }
+    
+    h3
+    {
+        font-size: 36px;
+    }
+
+ }
